@@ -1,7 +1,9 @@
 # MiniRadar
 
-拿着手机不知所措的同学，请按上面的 View code 就可以看到程序和说明书了，部分手机不能在线阅读pdf，可以下载后再看。
-下载是按绿色的 Clone or Download 按钮下载zip的打包文件。
+拿着手机不知所措的同学，请按上面的 View code 就可以看到程序和说明书了，部分手机不能在线阅读pdf，打包下载后再看。
+下载是按绿色的 Clone or Download 按钮下载zip的打包文件。 不会用的可以看一下Github使用教程： https://www.ixigua.com/i6846441137809392131/
+
+还是不会用的可以到百度下载程序资料大全包： http://dwz.date/bzg3    提取码: px9s （最后更新日期2020.6）
 
 推荐直接使用Arduino.cc官网的web版编译器 
 部分内容可能翻墙后更方便，推荐一个翻墙工具， https://github.com/bannedbook/fanqiang/wiki
