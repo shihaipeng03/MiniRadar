@@ -29,7 +29,7 @@ void setup(void)
       
       pinMode(trigPin, OUTPUT);       //设置trigPin端口模式
       pinMode(echoPin, INPUT);        //设置echoPin端口模式
-      Serial.begin(9600);             //设置串口传输率
+      Serial.begin(115200);             //设置串口传输率
       baseServo.attach(ServoPin);     //初始化舵机
     
       //欢迎屏幕
@@ -201,12 +201,12 @@ void loop(void)
       ucg.setColor(255,0,0);
       ucg.drawDisc(distance*cos(radians(x))+Xcent,-distance*sin(radians(x))+base, 1, UCG_DRAW_ALL);
     
-     /*      
+           
       //调试代码，输出角度和测距值  
       Serial.print(x); 
       Serial.print("    ,   ");
       Serial.println(distance); 
-     */
+     
 
       if (x > 70 and x < 110)  fix_font();  //扫描线和数字重合时，重绘数字
 
@@ -246,12 +246,12 @@ void loop(void)
       ucg.setColor(255,0,0);
       ucg.drawDisc(distance*cos(radians(x))+Xcent,-distance*sin(radians(x))+base, 1, UCG_DRAW_ALL);
       
-     /*      
+           
       //调试代码，输出角度和测距值  
       Serial.print(x); 
       Serial.print("    ,   ");
       Serial.println(distance); 
-     */
+     
       if (x > 70 and x < 110)  fix_font();  //扫描线和数字重合时，重绘数字
       
       ucg.setColor(0,155,  0);
