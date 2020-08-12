@@ -8,7 +8,11 @@
 
 #include <Servo.h> 
 #include <SPI.h>
-#include "Ucglib.h"           //显示屏的lib 如果没有该lib请按Ctrl+Shift+I 从 库管理器中搜索 ucglib，并安装
+#include "Ucglib.h"           
+//显示屏的lib 如果没有该lib请按Ctrl+Shift+I 从 库管理器中搜索 ucglib，并安装
+//上面报错，请观看视频教程 2分30秒起 https://www.ixigua.com/6846441137809392131
+
+
 #define  trigPin   6          //超声波模块的Trig口 6#
 #define  echoPin   5          //超声波模块的echo口 5#
 #define  ServoPin  3          //底座舵机端口 3#
@@ -68,7 +72,8 @@ void setup(void)
       delay(400);
     
       //清屏
-      ucg.clearScreen();
+      //ucg.clearScreen();
+      cls();
       ucg.setFontMode(UCG_FONT_MODE_SOLID);
       ucg.setFont(ucg_font_orgv01_hr);
   
@@ -221,8 +226,8 @@ void loop(void)
       ucg.print("cm  "); 
       
   }
-  ucg.clearScreen();  //清屏 如果arduino供电不足，可能会引起白屏（显示信号中断）可以用 cls();函数代替 ucg.clearScreen(); 
-  //cls();   //如有频繁白屏情况，可以使用该函数 。或者增加外部供电
+  //ucg.clearScreen();  //清屏 如果arduino供电不足，可能会引起白屏（显示信号中断）可以用 cls();函数代替 ucg.clearScreen(); 
+  cls();   //如有频繁白屏情况，可以使用该函数 。或者增加外部供电
   fix(); 
   fix_font();          //重绘屏幕背景元素
   
@@ -265,8 +270,8 @@ void loop(void)
       ucg.print("cm   "); 
   
   }
- ucg.clearScreen(); //
-// cls();
+ //ucg.clearScreen(); //
+ cls();
 
 
 }
