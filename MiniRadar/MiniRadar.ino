@@ -203,8 +203,16 @@ void loop(void)
       distance = calculateDistance();
      
       //根据测得距离在对应位置画点
-      ucg.setColor(255,0,0);
-      ucg.drawDisc(distance*cos(radians(x))+Xcent,-distance*sin(radians(x))+base, 1, UCG_DRAW_ALL);
+      if (distance < 100)
+      {
+        ucg.setColor(255,0,0);
+        ucg.drawDisc(distance*cos(radians(x))+Xcent,-distance*sin(radians(x))+base, 1, UCG_DRAW_ALL);
+      }
+      else
+      { //超过1米以上的，用黄色画在边缘区域示意
+        ucg.setColor(255,255,0);
+        ucg.drawDisc(116*cos(radians(x))+Xcent,-116*sin(radians(x))+base, 1, UCG_DRAW_ALL);
+      }
     
            
       //调试代码，输出角度和测距值  
@@ -247,10 +255,18 @@ void loop(void)
       ucg.setColor(0, 200, 0);
       //测距
       distance = calculateDistance();
+
       //根据测得距离在对应位置画点
-      ucg.setColor(255,0,0);
-      ucg.drawDisc(distance*cos(radians(x))+Xcent,-distance*sin(radians(x))+base, 1, UCG_DRAW_ALL);
-      
+      if (distance < 100)
+      {
+        ucg.setColor(255,0,0);
+        ucg.drawDisc(distance*cos(radians(x))+Xcent,-distance*sin(radians(x))+base, 1, UCG_DRAW_ALL);
+      }
+      else
+      { //超过1米以上的，用黄色画在边缘区域示意
+        ucg.setColor(255,255,0);
+        ucg.drawDisc(116*cos(radians(x))+Xcent,-116*sin(radians(x))+base, 1, UCG_DRAW_ALL);
+      }
            
       //调试代码，输出角度和测距值  
       Serial.print(x); 
