@@ -84,7 +84,13 @@ void cls()
 {
   //清屏
   ucg.setColor(0, 0, 0, 0);
-  ucg.drawBox(0, 0, 160, 128);
+  for(int s=0;s<128;s++)
+  {
+    ucg.drawHLine(0,s,160);
+    delay(4);
+  }
+    
+  //ucg.drawBox(0, 0, 160, 60);
 
 }
 
@@ -222,20 +228,23 @@ void loop(void)
      
 
       if (x > 70 and x < 110)  fix_font();  //扫描线和数字重合时，重绘数字
-
+ 
       ucg.setColor(0,155,  0);
       ucg.setPrintPos(0,126);
       ucg.print("DEG: "); 
       ucg.setPrintPos(24,126);
       ucg.print(x);
       ucg.print("  ");
-      ucg.setPrintPos(130,126);
+      ucg.setPrintPos(125,126);
+      ucg.print("  ");
       ucg.print(distance);
       ucg.print("cm  "); 
       
   }
   //ucg.clearScreen();  //清屏 如果arduino供电不足，可能会引起白屏（显示信号中断）可以用 cls();函数代替 ucg.clearScreen(); 
+  delay(50);
   cls();   //如有频繁白屏情况，可以使用该函数 。或者增加外部供电
+ 
   fix(); 
   fix_font();          //重绘屏幕背景元素
   
@@ -281,12 +290,14 @@ void loop(void)
       ucg.setPrintPos(24,126);
       ucg.print(x);
       ucg.print("  ");
-      ucg.setPrintPos(130,126);
+      ucg.setPrintPos(125,126);
+      ucg.print("  ");
       ucg.print(distance);
       ucg.print("cm   "); 
   
   }
  //ucg.clearScreen(); //
+ delay(50);
  cls();
 
 
