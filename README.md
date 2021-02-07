@@ -5,6 +5,9 @@
 
 还是不会用的可以到百度下载程序资料大全包下载链接: https://pan.baidu.com/s/1jAKLyw1U7uZOfD-dVMVJpQ 提取码: rg9f （9.28最后更新）
 
+视频教程可以到B站，西瓜围观：https://www.bilibili.com/video/BV1nA411g7wQ/
+https://www.ixigua.com/6926397049462063630?logTag=jqAVVtk8pIh6tufrNdCAB
+
 推荐直接使用Arduino.cc官网的web版编译器 
 部分内容可能翻墙后更方便，推荐一个翻墙工具， https://github.com/bannedbook/fanqiang/wiki
 
