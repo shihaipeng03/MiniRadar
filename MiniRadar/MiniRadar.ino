@@ -10,7 +10,7 @@
 #include <SPI.h>
 #include "Ucglib.h"           
 //显示屏的lib 如果没有该lib请按Ctrl+Shift+I 从 库管理器中搜索 ucglib，并安装
-//上面报错，请观看视频教程 2分30秒起 https://www.ixigua.com/6846441137809392131
+//上面报错，请观看视频教程 2分30秒起 https://www.bilibili.com/video/BV1ff4y1975o
 
 
 #define  trigPin   6          //超声波模块的Trig口 6#
@@ -289,9 +289,9 @@ void loop(void)
       ucg.print("DEG: "); 
       ucg.setPrintPos(24,126);
       ucg.print(x);
-      ucg.print("  ");
+      ucg.print("   ");
       ucg.setPrintPos(125,126);
-      ucg.print("  ");
+      ucg.print("   ");
       ucg.print(distance);
       ucg.print("cm   "); 
   
