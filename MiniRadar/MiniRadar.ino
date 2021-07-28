@@ -64,12 +64,7 @@ void setup(void)
            }
       ucg.print("OK!");
       delay(500);
-      ucg.setColor(0,0, 0, 0);
-      ucg.setColor(1,0, 0, 0);
-      ucg.setColor(2,0, 0, 0);
-      ucg.setColor(3,0, 0, 0);
-      ucg.drawGradientBox(0, 0, 160, 128);
-      delay(400);
+
     
       //清屏
       //ucg.clearScreen();
@@ -84,13 +79,14 @@ void cls()
 {
   //清屏
   ucg.setColor(0, 0, 0, 0);
-  for(int s=0;s<128;s++)
+  
+  for(int s=0;s<128;s+=8)
+  for(int t=0;t<160;t+=16)
   {
-    ucg.drawHLine(0,s,160);
-    delay(4);
+    ucg.drawBox(t,s,16,8);
+   // delay(1);
   }
     
-  //ucg.drawBox(0, 0, 160, 60);
 
 }
 
