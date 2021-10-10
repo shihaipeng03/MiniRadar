@@ -52,10 +52,11 @@ void setup(void)
       ucg.setPrintPos(25,40);
       ucg.print("Mini Radar");
       ucg.setFont(ucg_font_helvB08_tf);
-      ucg.setColor(20, 255, 20);
+      ucg.setColor(0, 255, 0);
       ucg.setPrintPos(40,100);
       ucg.print("Testing...");
       baseServo.write(90);
+      ucg.setColor(0, 255, 0);
     
       //测试底座的运行情况，注意检测底座位置和转动姿态，是否有卡住（或者导线缠绕）的情况。
       for(int x=0;x<180;x+=5)
@@ -64,14 +65,17 @@ void setup(void)
            }
       ucg.print("OK!");
       delay(500);
-
+      ucg.setColor(0, 0, 0, 0);
+      ucg.setColor(1, 0, 0, 0);
+      ucg.setColor(2, 0, 0,0);
+      ucg.setColor(3, 0, 0, 0);
     
       //清屏
       //ucg.clearScreen();
       cls();
-      ucg.setFontMode(UCG_FONT_MODE_SOLID);
+      
       ucg.setFont(ucg_font_orgv01_hr);
-  
+      ucg.setFontMode(UCG_FONT_MODE_SOLID);
 }
 
 
@@ -225,7 +229,7 @@ void loop(void)
 
       if (x > 70 and x < 110)  fix_font();  //扫描线和数字重合时，重绘数字
  
-      ucg.setColor(0,155,  0);
+      ucg.setColor(0,0,155,  0);
       ucg.setPrintPos(0,126);
       ucg.print("DEG: "); 
       ucg.setPrintPos(24,126);
@@ -280,7 +284,7 @@ void loop(void)
      
       if (x > 70 and x < 110)  fix_font();  //扫描线和数字重合时，重绘数字
       
-      ucg.setColor(0,155,  0);
+      ucg.setColor(0,0,155,  0);
       ucg.setPrintPos(0,126);
       ucg.print("DEG: "); 
       ucg.setPrintPos(24,126);
